@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0EF7EFAA-4B66-4B58-94CD-3AC2C287033F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DKib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Bone.cpp" />
+    <ClCompile Include="GameApplication.cpp" />
+    <ClCompile Include="Geometry\QuadTree.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="NodeMgr.cpp" />
+    <ClCompile Include="Parser\KParser.cpp" />
+    <ClCompile Include="Parser\KXML.cpp" />
+    <ClCompile Include="Resources\FXMgr.cpp" />
+    <ClCompile Include="Resources\PSMgr.cpp" />
+    <ClCompile Include="Resources\ResourcesMgr.cpp" />
+    <ClCompile Include="Resources\ShaderMgr.cpp" />
+    <ClCompile Include="Resources\SoundMgr.cpp" />
+    <ClCompile Include="Resources\TextureMgr.cpp" />
+    <ClCompile Include="Resources\VSMgr.cpp" />
+    <ClCompile Include="Resources\XMLMgr.cpp" />
+    <ClCompile Include="RigidMesh.cpp" />
+    <ClCompile Include="SkinnedMesh.cpp" />
+    <ClCompile Include="SSkinnedMesh.cpp" />
+    <ClCompile Include="Utility\BoxCollider.cpp" />
+    <ClCompile Include="Utility\Collider.cpp" />
+    <ClCompile Include="Utility\Color3.cpp" />
+    <ClCompile Include="Utility\Color4.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DCamera.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DColor4.cpp" />
+    <ClCompile Include="Utility\DirectUtility\Dib.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DInput.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DJoystick.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DKeyboardBuffer.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DLight.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DLightMgr.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DMaterial.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DMatrix.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DMouseBuffer.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DPlane.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DQuaternion.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DSound.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DTerrain.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DTrack.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DVector2.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DVector3.cpp" />
+    <ClCompile Include="Utility\DirectUtility\DVector4.cpp" />
+    <ClCompile Include="Utility\Frustum.cpp" />
+    <ClCompile Include="Utility\KLog.cpp" />
+    <ClCompile Include="Utility\Material.cpp" />
+    <ClCompile Include="Utility\Matrix4x4.cpp" />
+    <ClCompile Include="Utility\Plane.cpp" />
+    <ClCompile Include="Utility\Quaternion.cpp" />
+    <ClCompile Include="Utility\Rect.cpp" />
+    <ClCompile Include="Utility\SphereCollider.cpp" />
+    <ClCompile Include="Utility\Vector2.cpp" />
+    <ClCompile Include="Utility\Vector3.cpp" />
+    <ClCompile Include="Utility\Vector4.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="Bone.h" />
+    <ClInclude Include="Define.h" />
+    <ClInclude Include="DirectDefine.h" />
+    <ClInclude Include="GameApplication.h" />
+    <ClInclude Include="Geometry\QuadTree.h" />
+    <ClInclude Include="ID\FXID.h" />
+    <ClInclude Include="ID\PSID.h" />
+    <ClInclude Include="ID\SoundID.h" />
+    <ClInclude Include="ID\TextureID.h" />
+    <ClInclude Include="ID\VSID.h" />
+    <ClInclude Include="ID\XMLID.h" />
+    <ClInclude Include="Interface\ICamera.h" />
+    <ClInclude Include="Interface\ICollider.h" />
+    <ClInclude Include="Interface\IFrustum.h" />
+    <ClInclude Include="Interface\IInput.h" />
+    <ClInclude Include="Interface\ILight.h" />
+    <ClInclude Include="Interface\ILightMgr.h" />
+    <ClInclude Include="Interface\INodeMgr.h" />
+    <ClInclude Include="Interface\IResourcesMgr.h" />
+    <ClInclude Include="Interface\IShaderMgr.h" />
+    <ClInclude Include="Interface\ISound.h" />
+    <ClInclude Include="Interface\ISoundMgr.h" />
+    <ClInclude Include="Interface\ITerrain.h" />
+    <ClInclude Include="Interface\IXMLMgr.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="NodeMgr.h" />
+    <ClInclude Include="Parser\KParsedData.h" />
+    <ClInclude Include="Parser\KParser.h" />
+    <ClInclude Include="Parser\KXML.h" />
+    <ClInclude Include="Parser\KParsedMesh.h" />
+    <ClInclude Include="Resources\FXMgr.h" />
+    <ClInclude Include="Resources\PSMgr.h" />
+    <ClInclude Include="Resources\ResourcesMgr.h" />
+    <ClInclude Include="Resources\ShaderMgr.h" />
+    <ClInclude Include="Resources\SoundMgr.h" />
+    <ClInclude Include="Resources\TextureMgr.h" />
+    <ClInclude Include="Resources\VSMgr.h" />
+    <ClInclude Include="Resources\XMLMgr.h" />
+    <ClInclude Include="RigidMesh.h" />
+    <ClInclude Include="SkinnedMesh.h" />
+    <ClInclude Include="SSkinnedMesh.h" />
+    <ClInclude Include="Utility\BoxCollider.h" />
+    <ClInclude Include="Utility\CodeProjectSingleton.h" />
+    <ClInclude Include="Utility\Collider.h" />
+    <ClInclude Include="Utility\Color3.h" />
+    <ClInclude Include="Utility\Color4.h" />
+    <ClInclude Include="Utility\DirectUtility\DCamera.h" />
+    <ClInclude Include="Utility\DirectUtility\DColor4.h" />
+    <ClInclude Include="Utility\DirectUtility\Dib.h" />
+    <ClInclude Include="Utility\DirectUtility\DInput.h" />
+    <ClInclude Include="Utility\DirectUtility\DJoystick.h" />
+    <ClInclude Include="Utility\DirectUtility\DKeyboardBuffer.h" />
+    <ClInclude Include="Utility\DirectUtility\DKeyCode.h" />
+    <ClInclude Include="Utility\DirectUtility\DLight.h" />
+    <ClInclude Include="Utility\DirectUtility\DLightMgr.h" />
+    <ClInclude Include="Utility\DirectUtility\DMaterial.h" />
+    <ClInclude Include="Utility\DirectUtility\DMatrix.h" />
+    <ClInclude Include="Utility\DirectUtility\DMouseBuffer.h" />
+    <ClInclude Include="Utility\DirectUtility\DPlane.h" />
+    <ClInclude Include="Utility\DirectUtility\DQuaternion.h" />
+    <ClInclude Include="Utility\DirectUtility\DSound.h" />
+    <ClInclude Include="Utility\DirectUtility\DTerrain.h" />
+    <ClInclude Include="Utility\DirectUtility\DTrack.h" />
+    <ClInclude Include="Utility\DirectUtility\DVector2.h" />
+    <ClInclude Include="Utility\DirectUtility\DVector3.h" />
+    <ClInclude Include="Utility\DirectUtility\DVector4.h" />
+    <ClInclude Include="Utility\Frustum.h" />
+    <ClInclude Include="Utility\KLog.h" />
+    <ClInclude Include="Utility\Material.h" />
+    <ClInclude Include="Utility\Matrix4x4.h" />
+    <ClInclude Include="Utility\Plane.h" />
+    <ClInclude Include="Utility\Quaternion.h" />
+    <ClInclude Include="Utility\GPGSingleton.h" />
+    <ClInclude Include="Utility\Rect.h" />
+    <ClInclude Include="Utility\SphereCollider.h" />
+    <ClInclude Include="Utility\Vector2.h" />
+    <ClInclude Include="Utility\Vector3.h" />
+    <ClInclude Include="Utility\Vector4.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="testps.fx">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ps_main</EntryPointName>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">2.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="testshader.fx">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vs_main</EntryPointName>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">2.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="testTerrainps.fx">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ps_main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">2.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="testTerrainvs.fx">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vs_main</EntryPointName>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">2.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="testvs.fx">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vs_main</EntryPointName>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">2.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
